@@ -33,20 +33,23 @@ def python_path():
                 
 def test():
     print "Util Unit Tests"
-    print "T01"
+    print "==============="
+    print "Anon type Test 01"
     car=Anon(Colour="Red", Make="Ford")
     print car.Make
     
-    print "T02"
+    print "class_face Test 01"
     class_face(car)
     
-    print "T03"
+    print "Anon type Test 02"
     d = [Anon(card_value=card+1, suit_value=suit) for card in range(13) for suit in range(4)]
     class_face(d[0])
     
-    print "T04"
+    print "Current Python Path:"
     python_path()
-    print "(expecting C:\Users\Bob\Anaconda2\envs\Scikitlearn01\pythonw.exe, otherwise activate anaconda environment")
+    print "expecting env in anaconda hierarchy like C:\Users\Bob\Anaconda2\envs\Scikitlearn01\pythonw.exe"
+    print "otherwise activate anaconda environment (conda info --env, conda activate Scikitlearn01, conda info)"
+    print "  and set (wing) project\project property\python executable to it eg c:\Anaconda2\envs\Scikitlearn01\python.exe"
     
 if __name__  == "__main__":
     test()
