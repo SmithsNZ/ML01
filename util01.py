@@ -46,7 +46,7 @@ def test():
     
     print "T04"
     python_path()
-    print "(expecting C:\Users\Bob\Anaconda2\envs\Scikitlearn01\pythonw.exe, otherwise activate anaconda environment")
+    print "expecting C:\Users\Bob\Anaconda2\envs\Scikitlearn01\pythonw.exe, otherwise activate anaconda environment"
     
 if __name__  == "__main__":
     test()
