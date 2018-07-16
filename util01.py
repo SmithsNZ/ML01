@@ -50,6 +50,6 @@ def test():
     print "expecting env in anaconda hierarchy like C:\Users\Bob\Anaconda2\envs\Scikitlearn01\pythonw.exe"
     print "otherwise activate anaconda environment (conda info --env, conda activate Scikitlearn01, conda info)"
     print "  and set (wing) project\project property\python executable to it eg c:\Anaconda2\envs\Scikitlearn01\python.exe"
-    
+
 if __name__  == "__main__":
     test()

@@ -7,46 +7,19 @@ pd.set_option('display.width', 5000)
 pd.set_option('display.max_columns', 100) 
 pd.set_option('display.max_colwidth', 50)
 
+print "here"
+
+# df = pd.read_excel(open('C:\\Bob\\Data\\titanic3.xls', 'rb'), sheetname = 'titanic3')
 train = pd.read_csv('C:/Bob/Data/titanic/train.csv')
 test = pd.read_csv('C:/Bob/Data/titanic/test.csv')
 
 print train.values
+print len(train.columns)
 print train.columns.values
 
 train.head()
 train.info()
 train.describe()
-
-C:\Bob\Data\Titanic
-
-#c1 = pd.ExcelFile("C:\\Bob\\Data\\Titanic\\train.csv")
-
-pd.set_option('display.max_rows', 500)
-pd.set_option('display.width', 5000)
-pd.set_option('display.max_columns', 100) 
-pd.set_option('display.max_colwidth', 50)
-
-
-f1 = pd.ExcelFile("C:\\Bob\\Data\\titanic3.xls")
-df_train = pd.read_csv('C:\\Bob\\Data\\titanic\\train.csv')
-print(len(df_train.columns))
-print (df_train.head())
-
-df = pd.read_excel(open('C:\\Bob\\Data\\titanic3.xls', 'rb'), sheetname = 'titanic3')
-
-print (df.head())
-
-df_train.info()
-
-#import sys
-#print(sys.executable) #C:\Users\Bob\Anaconda2\envs\Scikitlearn01\pythonw.exe
-
-import sys
-print(sys.executable) #C:\Users\Bob\Anaconda2\envs\Scikitlearn01\pythonw.exe
-
-import csv as csv
-import numpy as np
-import pandas as pd
 
 pd.read('test', )
 print ("Hello, World!")
