@@ -21,6 +21,8 @@ train.head()
 train.info()
 train.describe()
 
+# https://mashimo.wordpress.com/2013/07/21/visualize-quartiles-and-summary-statistics-in-python/
+
 pd.read('test', )
 print ("Hello, World!")
 

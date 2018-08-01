@@ -1,8 +1,4 @@
-#import sys
-#print (sys.executable)
-
-l1 = ['a', 'b', 'c']
-l1[2:]
+#ctl alt e to run selection in wing
 
 # import csv as csv
 import numpy as np
@@ -10,25 +6,32 @@ import pandas as pd
 # import xlrd
 # import pylab as P
 
+from pandas import Series, DataFrame
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 pd.set_option('display.width', 1000)
 pd.set_option('display.max_colwidth', 30)
 pd.set_option('display.max_rows', 30)
 pd.set_option('display.max_columns', 100) 
 
-
+1/0
 # Excel Syntax
 #f1 = pd.ExcelFile("C:\\Bob\\Data\\titanic\\\titanic3.xls")
 #df = pd.read_excel(open('C:\\Bob\\Data\\titanic\\titanic3.xls', 'rb'), sheetname = 'titanic3')
 #print (df.head())
 
-df_train = pd.read_csv('C:\\Bob\\Data\\titanic\\train.csv')
-type(df_train) # pandas.core.frame.DataFrame
+train = pd.read_csv('C:/Bob/Data/titanic/train.csv')
+test = pd.read_csv('C:/Bob/Data/titanic/test.csv')
 
-len(df_train.columns) # col count
-df_train.head(10) # sample data
-df_train.tail(10)
-df_train.info() # file structure
-df_train.describe() # content info
+df_train = pd.read_csv('C:\\Bob\\Data\\titanic\\train.csv')
+type(train) # pandas.core.frame.DataFrame
+
+len(train.columns) # col count
+train.head(10) # sample data
+train.tail(10)
+train.info() # file structure
+train.describe() # content info
 #          Survived  PassengerId      Pclass         Age       SibSp       Parch        Fare
 # count  891.000000   891.000000  891.000000  714.000000  891.000000  891.000000  891.000000
 # mean     0.383838   446.000000    2.308642   29.699118    0.523008    0.381594   32.204208
@@ -40,7 +43,10 @@ df_train.describe() # content info
 # max      1.000000   891.000000    3.000000   80.000000    8.000000    6.000000  512.329200
 
 #std = 68% of values are +- value. avg Age = 29, 68% are between 15 (29-14) and 43 (29+14)
-print df_train.Age.hist()
+
+sns.factorplot('Sex', data=train, kind='count')
+plt.show()
+print train.Age.hist()
 print df_train.Age.dropna().hist(bins=20)
 
 df_train.Age[0:10] #select top 10 Age
