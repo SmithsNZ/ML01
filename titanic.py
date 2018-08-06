@@ -44,6 +44,8 @@ train.describe() # content info
 
 #std = 68% of values are +- value. avg Age = 29, 68% are between 15 (29-14) and 43 (29+14)
 
+# http://seaborn.pydata.org/api.html
+
 sns.factorplot('Sex', data=train, kind='count')
 plt.show()
 print train.Age.hist()
